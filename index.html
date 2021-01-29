@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Hotel js</title>
+</head>
+
+<body>
+    <div class="container col-lg-5">
+
+        <div class="input-group">
+            <select class="custom-select mt-4" id="selectHotels">
+            </select>
+            <div class="input-group-append">
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary mt-4" type="button" data-toggle="modal" data-target="#exampleModal">
+                    Reserve</button>
+            </div>
+        </div>
+
+        <p class="display-4 mt-1 text-primary">Hotel Availability</p>
+        <p class="h5" id="hotelName"></p>
+        <small id="totalRooms"></small>
+        <hr>
+        <div align="center">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded"  id="card">
+                <img class="card-img-top"  src="" alt="" value="img" style="object-fit:cover; max-height: 200px;">
+                <div class="card-body" align="left">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                    <!--<a href="#" class="btn btn-primary">Visitar</a>-->
+                </div>
+                <p class="lead ml-2">rooms available</p> 
+                <p id="availableRooms" class="display-4">-</p>
+                   
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Register Reservation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="mod">
+                       <p class="mod h3 text-primary"></p>
+                       <p class="mod lead"></p>
+                       <p class="mod lead"></p>
+                       <p class="mod lead"></p>
+                       <p class="mod lead"></p>
+                    </div>
+                    <div class="modal-footer "  id="bR" >
+                        <button type="button" class="btn btn-danger bR" >Book Room</button>
+                        <button type="button" class="btn btn-warning text-light" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success bR">Release Book</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="scripts/Hotel.js"></script>
+    <script src="scripts/obj.js"></script>
+</body>
+
+</html>
